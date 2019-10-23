@@ -52,8 +52,16 @@ heuristica.AspiradorPo <- function(atual){
   
   if(is.null(atual$desc))
     return(Inf)
-  ## h(obj) = M + C + B
-  return(sum(atual$desc))
+
+  desc = atual$desc
+
+  sujos = desc[1] + desc[2] + desc[3] + desc[4]
+  
+  if(desc[desc[5]] == 0){ ## quadrado do aspirador está limpo
+    return ((2 * sujos) + 1)
+  }else{ ## quadrado do aspirador está sujo
+    return (2 * sujos)
+  }
 }
 
 geraFilhos.AspiradorPo <- function(obj) {
