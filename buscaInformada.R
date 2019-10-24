@@ -7,7 +7,6 @@ buscaBestFirst <- function(inicial, objetivo, abordagem = "AEstrela"){
     atual <- abertos[[1]]
     abertos <- abertos[-1]
     if(atual == objetivo){
-      print("OBJETIVO ALCANÇADO!")
       return(recuperaCaminho(atual))
     }else {
       filhos <- geraFilhos(atual)
