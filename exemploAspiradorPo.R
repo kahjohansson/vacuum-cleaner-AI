@@ -2,7 +2,7 @@ source("AspiradorPo.R")
 source("buscaDesinformada.R")
 source("buscaInformada.R")
 
-inicial <- AspiradorPo(desc = c(NO = 1, NE = 1, SO = 0, SE = 0, AP = 1, C = 0))
+inicial <- AspiradorPo(desc = c(NO = 0, NE = 1, SO = 0, SE = 1, AP = 1, C = 0))
 
 objetivo <- AspiradorPo()
 objetivo$desc <- c(NO = 0, NE = 0, SO = 0, SE = 0, AP = 0, C = 0) # valores de AP e C são indiferentes
