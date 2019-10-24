@@ -20,19 +20,9 @@ AspiradorPo <- function(desc = NULL, pai = NULL){
 Ops.AspiradorPo = function(obj1,obj2){
   if(.Generic == "=="){
 
-    if(obj1$desc[1] == objetivo$desc[1] && obj1$desc[2] == objetivo$desc[2] 
-      && obj1$desc[3] == objetivo$desc[3] && obj1$desc[4] == objetivo$desc[4]){
-      return (TRUE);
-    
-    }else if(obj2$desc[1] == objetivo$desc[1] && obj2$desc[2] == objetivo$desc[2] 
-      && obj2$desc[3] == objetivo$desc[3] && obj2$desc[4] == objetivo$desc[4]){
-      return (TRUE);
-  
-    }else{
-
+    ## compara somente os 4 primeiros argumentos, que representam os quadrados
     return(obj1$desc[1] == obj2$desc[1] && obj1$desc[2] == obj2$desc[2] && obj1$desc[3] == obj2$desc[3] && obj1$desc[4] == obj2$desc[4])
-    
-    }
+
   }
 }
 
@@ -103,7 +93,6 @@ geraFilhos.AspiradorPo <- function(obj) {
   ## gera os objetos AspiradorPo para os filhos
   count = 1
   for(f in filhos){
-    print(f)
     x <- AspiradorPo(desc = f, pai = obj)
     x$h <- heuristica(x)
     x$g <- obj$g + f[[6]]
