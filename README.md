@@ -1,3 +1,3 @@
 # vacuum-cleaner-AI
 
-Repositório para o probleminha do aspirador de pó, da matéria de Inteligência Artificial (:
+Resolução do problema do aspirador de pó, proposto como requisito parcial da disciplina Inteligência Artificial, ministrado em 2019.2 pela Dr. Heloísa Camargo.
